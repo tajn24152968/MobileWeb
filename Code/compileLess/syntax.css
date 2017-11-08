@@ -1,0 +1,30 @@
+/* 像这样的注释 会编译到 CSS文件中 */
+body {
+  background-color: #ccc;
+}
+main {
+  color: #ccc;
+  background-color: #fff;
+  font-size: 24px;
+  padding: 20px 30px 40px 50px;
+}
+aside,
+main {
+  font-size: 24px;
+  margin: 20px 30px 40px 50px;
+}
+aside,
+main {
+  font-weight: normal;
+  font-size: 24px;
+  margin: 20px 30px 40px 50px;
+  padding: 20px;
+  width: 20px;
+  height: 40px;
+  line-height: 30px;
+}
+main {
+  color: #fff;
+  background-color: #fff;
+  font-weight: bold;
+}

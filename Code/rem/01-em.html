@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>em</title>
+  <style>
+    .box {
+      width: 10em;
+      height: 10em;
+      background-color: red;
+      text-align: center;
+      font-size: 20px;
+      /* 如果元素自身没有font-size这个属性  那么em单位相对的是父元素继承来的font-size */
+      /* 如果元素自身有font-size这个属性 那么em单位相对的是自身的font-size */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">永</div>
+</body>
+
+</html>

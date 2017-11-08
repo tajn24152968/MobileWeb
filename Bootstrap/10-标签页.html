@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap基本模板</title>
+
+  <!-- Bootstrap -->
+  <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    div[class^='container'] {
+      height: 40px;
+      background-color: pink;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#home" data-toggle="tab">Home</a>
+      </li>
+      <li>
+        <a href="#profile" data-toggle="tab">Profile</a>
+      </li>
+      <li>
+        <a href="#messages" data-toggle="tab">Messages</a>
+      </li>
+      <li>
+        <a href="#settings" data-toggle="tab">Settings</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">
+        <p>阿斯蒂芬撒旦范德萨范德萨范德萨范德萨</p>
+        <p>阿斯蒂芬撒旦范德萨范德萨范德萨范德萨</p>
+        <p>阿斯蒂芬撒旦范德萨范德萨范德萨范德萨</p>
+        <p>阿斯蒂芬撒旦范德萨范德萨范德萨范德萨</p>
+        <p>阿斯蒂芬撒旦范德萨范德萨范德萨范德萨</p>
+      </div>
+      <div class="tab-pane" id="profile">2</div>
+      <div class="tab-pane" id="messages">3</div>
+      <div class="tab-pane" id="settings">4</div>
+    </div>
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jQuery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

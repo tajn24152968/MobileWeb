@@ -1,0 +1,17 @@
+
+
+/* 应用媒体查询来判别ipone 5  和ipone 6 */
+/* 关键字 media */
+
+@media screen and (width: 320px) {
+  body {
+    background-color: red;
+  }
+}
+
+
+@media screen and (width: 375px) {
+  body {
+    background-color: greenyellow;
+  }
+}

@@ -1,0 +1,119 @@
+// 引入变量样式表
+@import './setting.less';
+// 引入适配样式表
+@import './adapter.less';
+
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2,p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+// 页面的样式
+header {
+  position: relative;
+  width: 100%;
+  // height: 88px;
+  // height: (88px/32)*16px; 计算的式子
+  // height: (88/32)rem;错误写法  因为less不支持这样的写法 如果这样写了 会在单位前出现空格 css 不认识
+  height: (88rem/32);
+  background-color: @headerBgColor;
+
+  .back {
+    position: absolute;
+    top: (28rem/32);
+    left: (20rem/32);
+    width: (20rem/32);
+    height: (32rem/32);
+    background-image: url("../images/back.png");
+    background-position: left center;
+    background-size: (20rem/32) (32rem/32);
+    // 如果用户电脑上没有设计图中的字体 还想让用户电脑显示你设计图中的字体 就用网络字体
+  }
+
+  span {
+    font-size: (32rem/32);
+    color: @white;
+    line-height: (88rem/32);
+    margin-left: (56rem/32);
+  }
+}
+
+// 内容区域
+main {
+  width: 100%;
+  padding: 0 (24rem/32);
+  box-sizing: border-box;
+
+  .all {
+    width: 100%;
+  }
+
+  .all-top {
+    width: 100%;
+    height: (80rem/32);
+    line-height:  (80rem/32);
+    
+    overflow: hidden;
+    h2 {
+      float: left;
+      font-size: (28rem/32);
+      color: @black;
+    }
+
+    span {
+      float: right;
+      font-size: (28rem/32);
+      color:@allTopColor;
+    }
+  }
+
+  .all-bottom {
+    width: 100%;
+    height: (224rem/32);
+    border: 3px dashed @allBottomBorderColor;
+    box-sizing: border-box;
+
+    a.add {
+      display: block;
+      width: (104rem/32);
+      height: (104rem/32);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:(36rem/32);
+      i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/add.png");
+        background-size: (104rem/32) (104rem/32);
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: (26rem/32);
+      color: @allBottomAddColor;
+      margin-top: (16rem/32);
+    }
+  }
+
+  .tips {
+    margin-top: (118rem/32);
+    line-height: (40rem/32);
+    font-size: (24rem/32);
+    color: #999;
+  }
+}

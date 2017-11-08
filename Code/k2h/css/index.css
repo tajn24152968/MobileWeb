@@ -1,0 +1,110 @@
+@media screen and (width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 2.75rem;
+  background-color: #ff9b25;
+}
+header .back {
+  position: absolute;
+  top: 0.875rem;
+  left: 0.625rem;
+  width: 0.625rem;
+  height: 1rem;
+  background-image: url("../images/back.png");
+  background-position: left center;
+  background-size: 0.625rem 1rem;
+}
+header span {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 2.75rem;
+  margin-left: 1.75rem;
+}
+main {
+  width: 100%;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+main .all {
+  width: 100%;
+}
+main .all-top {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+main .all-top h2 {
+  float: left;
+  font-size: 0.875rem;
+  color: #000000;
+}
+main .all-top span {
+  float: right;
+  font-size: 0.875rem;
+  color: #888888;
+}
+main .all-bottom {
+  width: 100%;
+  height: 7rem;
+  border: 3px dashed #dedede;
+  box-sizing: border-box;
+}
+main .all-bottom a.add {
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.125rem;
+}
+main .all-bottom a.add i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/add.png");
+  background-size: 3.25rem 3.25rem;
+}
+main .all-bottom p {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #aeaeae;
+  margin-top: 0.5rem;
+}
+main .tips {
+  margin-top: 3.6875rem;
+  line-height: 1.25rem;
+  font-size: 0.75rem;
+  color: #999;
+}

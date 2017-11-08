@@ -1,0 +1,261 @@
+// 要引入变量表 变量表一般都是第一个引入的
+@import './setting.less';
+// 1.注释
+
+// 像这样拥有两个斜杠的注释 是不会编译到CSS文件中去的 这个注释有一个名字 叫: 静默注释
+/* 像这样的注释 会编译到 CSS文件中 */
+
+
+// 2.变量
+// 2.1 变量的格式: @变量名: 变量值
+
+// css代码
+
+// body {
+//   background-color:#ccc;
+// }
+
+// main {
+//   color:#ccc;
+//   background-color:#fff;
+//   font-size:24px;
+//   padding:20px 30px 40px 50px;
+// }
+// aside {
+//   font-size:24px;
+//   margin:20px 30px 40px 50px;
+// }
+
+
+
+body {
+  background-color:@gray;
+}
+
+main {
+  color:@gray;
+  background-color:@white;
+  font-size:@fontSize;
+  padding:@normalSize;
+}
+aside {
+  font-size:@fontSize;
+  margin:@normalSize;
+}
+
+
+// 3.嵌套规则
+// .container h1 {
+//   font-size: 25px;
+//   color: #E45456;
+// }
+
+// .container p {
+//   font-size: 25px;
+//   color: #3C7949;
+// }
+
+// .container .myclass h1 {
+//   font-size: 25px;
+//   color: #E45456;
+// }
+// .container .myclass p {
+//   font-size: 25px;
+//   color: #3C7949;
+// }
+
+// .container {
+//   h1,p {
+//     font-size: 25px;
+//     color:  #E45456;
+//   }
+
+//   .myclass {
+//     h1,p {
+//       font-size: 25px;
+//       color:  #E45456;
+//     }
+//   }
+// }
+
+
+
+
+// 4.父选择器
+// a {
+//   color:yellowgreen;
+// }
+// a:link {  
+//   color: black;  
+// }  
+// a:visited {  
+//   color:blue;  
+// }  
+// a:hover {  
+//   color: orange;  
+// }  
+// a:active {  
+//   color: pink;  
+// }  
+
+
+// a {
+//   color: yellowgreen;
+
+//   &:link {
+//     color:black;
+//   }
+// }
+
+// 直接子元素
+//  a span span是a元素的直接子元素
+
+// a {
+//   > span {
+//     display: block;
+//   }
+// }
+
+
+
+
+// 5.四则运算(+ - * /)
+
+// main  {
+//   font-size: 15px;
+//   margin: 20px;
+// }
+
+// main {
+//   font-size: 15px + 5;
+//   margin: 20px -5;
+//   padding: @fontSize *2;
+//   width: @fontSize / 12;
+// }
+
+
+
+// 6.混合器(函数)
+// 格式: .自定义混合器(){
+//    样式代码 
+// }
+// a {
+//   color:yellowgreen;
+// }
+// a:link {  
+//   color: black;  
+// }  
+// a:visited {  
+//   color:blue;  
+// }  
+// a:hover {  
+//   color: orange;  
+// }  
+// a:active {  
+//   color: pink;  
+// }  
+
+// 1. 无参的函数
+// 2. 有参数没有默认值的
+// 3. 有参有默认值的
+// .aStyle(){
+//   color: yellowgreen;
+
+//   &:link {
+//     color:black;
+//   }
+
+//   &:visited {
+//     color: blue;
+//   }
+//   &:hover {
+//     color:orange;
+//   }
+
+//   &:active {
+//     color: pink;
+//   }
+// }
+
+// a {
+//   .aStyle()
+// }
+
+// .aStyle(@normal,@link,@visited,@hover,@active){
+//   color: @normal;
+
+//   &:link {
+//     color:@link;
+//   }
+
+//   &:visited {
+//     color: @visited;
+//   }
+//   &:hover {
+//     color:@hover;
+//   }
+
+//   &:active {
+//     color: @active;
+//   }
+// }
+
+// .box {
+//  .aStyle()
+// }
+
+
+// .aStyle(@normal:red,@link:green,@visited:blue,@hover:yellow,@active:hotpink){
+//   color: @normal;
+
+//   &:link {
+//     color:@link;
+//   }
+
+//   &:visited {
+//     color: @visited;
+//   }
+//   &:hover {
+//     color:@hover;
+//   }
+
+//   &:active {
+//     color: @active;
+//   }
+// }
+
+
+// 7.继承(谨慎使用)
+// 格式: 
+//  &:extend(选择器)
+
+// aside {
+//   font-size:24px;
+//   margin:20px 30px 40px 50px;
+// }
+
+// main {
+//   color:#ccc;
+//   background-color:#fff;
+//   font-size:24px;
+//   padding:20px 30px 40px 50px;
+// }
+
+// 如果a中的样式 被包含在b中 这样的形式可以用继承
+// 但是如果a中有超过4行样式 都没有被包含在b中 这样的形式就尽量避免用继承
+aside {
+  font-weight: normal;
+  font-size:24px;
+  margin:20px 30px 40px 50px;
+  padding: 20px;
+  width: 20px;
+  height: 40px;
+  line-height: 30px;
+}
+
+main {
+  color: #fff;
+  background-color: #fff;
+  &:extend(aside);
+  font-weight: bold;
+}

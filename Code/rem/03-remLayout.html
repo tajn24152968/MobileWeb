@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rem布局原理</title>
+  <style>
+  /* 1. 拿到设计图 ,通过ps测量 这个元素在设计图中大小是 16px * 16px */
+
+  /* 2. 把这个元素适配到别的手机上去 */
+  @media screen and (width: 320px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (width: 360px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (width: 375px) {
+    html {
+      font-size: calc(375px / 20);
+    }
+  }
+
+  .box {
+    /* width: 0.5rem; */
+    /* height: 0.5rem; */
+    /* width: (16px/32)*1rem; */
+    /*  16/32 0.5*1*rem  0.5rem 0.5*16=8 0.5*18=9 */
+    background-color: red;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

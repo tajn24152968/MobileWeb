@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap基本模板</title>
+
+  <!-- Bootstrap -->
+  <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    .wjs-nav {
+      height: 80px;
+      border-radius: 0;
+    }
+
+    .wjs-nav .nav>li>a {
+      padding: 0 15px;
+      line-height: 80px;
+      color: #666;
+    }
+
+    .wjs-nav .nav>li {
+      position: relative;
+    }
+
+    .wjs-nav .nav>li b {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #ff0000;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    .wjs-nav .nav>li:hover b {
+      opacity: 1;
+    }
+
+    .wjs-nav .nav>li:hover a {
+      color: #333;
+    }
+
+    .wjs-nav .navbar-brand {
+      margin-right: 0px;
+      height: auto;
+      padding: 12px;
+    }
+
+    .wjs-nav .navbar-nav {
+      margin: 0 -15px
+    }
+
+    .wjs-nav .navbar-header button {
+      margin-top: calc((80px - 34px) / 2);
+    }
+
+    @media screen and (max-width: 768px) {
+      .wjs-nav {
+        height: 40px;
+        border-radius: 0;
+      }
+
+      .wjs-nav .navbar-brand {
+        padding:  5px;
+      }
+      .wjs-nav .navbar-brand img {
+        height: 40px;
+        width: auto;
+      }
+
+      .wjs-nav .navbar-header button {
+        margin-top: calc((50px - 34px) / 2);
+      }
+
+      .wjs-nav .nav>li>a {
+        line-height: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default  wjs-nav">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">我要投资</a>
+            <b></b>
+          </li>
+          <li>
+            <a href="#">我要借贷</a>
+            <b></b>
+          </li>
+          <li>
+            <a href="#">平台介绍</a>
+            <b></b>
+          </li>
+          <li>
+            <a href="#">新手专区</a>
+            <b></b>
+          </li>
+          <li>
+            <a href="#">最新动态</a>
+            <b></b>
+          </li>
+          <li>
+            <a href="#">微平台</a>
+            <b></b>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">个人中心</a>
+            <b></b>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jQuery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

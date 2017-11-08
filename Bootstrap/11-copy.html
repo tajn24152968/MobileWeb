@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap基本模板</title>
+
+  <!-- Bootstrap -->
+  <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    .tab-content>.tab-pane {
+      padding-top: 20px;
+    }
+
+    .item {
+      width: 100%;
+      height: 190px;
+      position: relative;
+      padding-right: 80px;
+      background-color: rgb(255, 0, 0);
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    }
+
+    .item .tiyan {
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    .item-left {
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+    }
+
+
+    .item-left dl {
+      color: #fff;
+    }
+
+    .item-left dt {
+      text-align: center;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .item-left dt a {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .item-left dd {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+
+
+    .item-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 100%;
+      border-left: 1px dashed #ccc;
+      padding: 20px 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .item-right p {
+      margin-top: 50px;
+    }
+
+    .item-right:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+
+      box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3) inset;
+    }
+
+
+    .item-right:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: -8px;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+
+      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3) inset;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#home" data-toggle="tab">Home</a>
+      </li>
+      <li>
+        <a href="#profile" data-toggle="tab">Profile</a>
+      </li>
+      <li>
+        <a href="#messages" data-toggle="tab">Messages</a>
+      </li>
+      <li>
+        <a href="#settings" data-toggle="tab">Settings</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-4 col-md-4  col-sm-6 col-xs-12">
+              <div class="item">
+                <a href="javascript:;" class="tiyan">
+                  <img src="./images/tiyan.png" alt="">
+                </a>
+                <div class="item-left">
+                  <dl>
+                    <dt>
+                      <a href="javascript:;">新手体验</a>
+                    </dt>
+                    <dd>
+                      <span class="pull-left">起投金额</span>
+                      <span class="pull-right">起投金额</span>
+                    </dd>
+                    <dd>
+                      <span class="pull-left">0.01万</span>
+                      <span class="pull-right">0.01万</span>
+                    </dd>
+                    <dd>
+                      <span class="pull-left">借款期限</span>
+                      <span class="pull-right">借款期限</span>
+                    </dd>
+                    <dd>
+                      <span class="pull-left">10天</span>
+                      <span class="pull-right">10天</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="item-right">
+                  <p>8</p>
+                  <b>年利率</b>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4  col-sm-6 col-xs-12">
+                <div class="item">
+                  <a href="javascript:;" class="tiyan">
+                    <img src="./images/tiyan.png" alt="">
+                  </a>
+                  <div class="item-left">
+                    <dl>
+                      <dt>
+                        <a href="javascript:;">新手体验</a>
+                      </dt>
+                      <dd>
+                        <span class="pull-left">起投金额</span>
+                        <span class="pull-right">起投金额</span>
+                      </dd>
+                      <dd>
+                        <span class="pull-left">0.01万</span>
+                        <span class="pull-right">0.01万</span>
+                      </dd>
+                      <dd>
+                        <span class="pull-left">借款期限</span>
+                        <span class="pull-right">借款期限</span>
+                      </dd>
+                      <dd>
+                        <span class="pull-left">10天</span>
+                        <span class="pull-right">10天</span>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="item-right">
+                    <p>8</p>
+                    <b>年利率</b>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4  col-sm-6 col-xs-12">
+                  <div class="item">
+                    <a href="javascript:;" class="tiyan">
+                      <img src="./images/tiyan.png" alt="">
+                    </a>
+                    <div class="item-left">
+                      <dl>
+                        <dt>
+                          <a href="javascript:;">新手体验</a>
+                        </dt>
+                        <dd>
+                          <span class="pull-left">起投金额</span>
+                          <span class="pull-right">起投金额</span>
+                        </dd>
+                        <dd>
+                          <span class="pull-left">0.01万</span>
+                          <span class="pull-right">0.01万</span>
+                        </dd>
+                        <dd>
+                          <span class="pull-left">借款期限</span>
+                          <span class="pull-right">借款期限</span>
+                        </dd>
+                        <dd>
+                          <span class="pull-left">10天</span>
+                          <span class="pull-right">10天</span>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="item-right">
+                      <p>8</p>
+                      <b>年利率</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-6 col-xs-12">
+                    <div class="item">
+                      <a href="javascript:;" class="tiyan">
+                        <img src="./images/tiyan.png" alt="">
+                      </a>
+                      <div class="item-left">
+                        <dl>
+                          <dt>
+                            <a href="javascript:;">新手体验</a>
+                          </dt>
+                          <dd>
+                            <span class="pull-left">起投金额</span>
+                            <span class="pull-right">起投金额</span>
+                          </dd>
+                          <dd>
+                            <span class="pull-left">0.01万</span>
+                            <span class="pull-right">0.01万</span>
+                          </dd>
+                          <dd>
+                            <span class="pull-left">借款期限</span>
+                            <span class="pull-right">借款期限</span>
+                          </dd>
+                          <dd>
+                            <span class="pull-left">10天</span>
+                            <span class="pull-right">10天</span>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="item-right">
+                        <p>8</p>
+                        <b>年利率</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4  col-sm-6 col-xs-12">
+                      <div class="item">
+                        <a href="javascript:;" class="tiyan">
+                          <img src="./images/tiyan.png" alt="">
+                        </a>
+                        <div class="item-left">
+                          <dl>
+                            <dt>
+                              <a href="javascript:;">新手体验</a>
+                            </dt>
+                            <dd>
+                              <span class="pull-left">起投金额</span>
+                              <span class="pull-right">起投金额</span>
+                            </dd>
+                            <dd>
+                              <span class="pull-left">0.01万</span>
+                              <span class="pull-right">0.01万</span>
+                            </dd>
+                            <dd>
+                              <span class="pull-left">借款期限</span>
+                              <span class="pull-right">借款期限</span>
+                            </dd>
+                            <dd>
+                              <span class="pull-left">10天</span>
+                              <span class="pull-right">10天</span>
+                            </dd>
+                          </dl>
+                        </div>
+                        <div class="item-right">
+                          <p>8</p>
+                          <b>年利率</b>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="profile">2</div>
+      <div class="tab-pane" id="messages">3</div>
+      <div class="tab-pane" id="settings">4</div>
+    </div>
+
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jQuery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

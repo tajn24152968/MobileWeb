@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap基本模板</title>
+
+  <!-- Bootstrap -->
+  <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    header {
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    div[class^='col'] {
+      height: 40px;
+      border-right: 1px solid #ccc;
+      text-align: center;
+      line-height: 40px;
+      color: #666;
+    }
+
+    div[class^='col'] a {
+      color: #666;
+    }
+
+
+    .join .signup {
+      text-decoration: none;
+      padding: 2px 6px;
+
+    }
+
+    .join .btn-default {
+      background-color: #f73b26;
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .btn.active.focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn:active:focus,
+    .btn:focus {
+      outline: none;
+    }
+
+    .join .btn-default.active.focus,
+    .join .btn-default.active:focus,
+    .join .btn-default.active:hover,
+    .join .btn-default:active.focus,
+    .join .btn-default:active:focus,
+    .join .btn-default:active:hover {
+      background-color: #f73b26;
+      color: #fff;
+      border-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hidden-sm">
+    <!-- 1. container 他是一个响应式的布局容器 根据不同的设备宽度 有不同的固定宽度 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 qrcode">
+          <i class="glyphicon glyphicon-phone"></i>
+          <a href="javascript:;">手机微金所</a>
+          <i class="glyphicon glyphicon-menu-down"></i>
+        </div>
+        <div class="col-md-5 service">
+          <i class="glyphicon glyphicon-phone-alt"></i>
+          <a href="javascript:;">4006-89-4006（服务时间：9:00-21:00)</a>
+        </div>
+        <div class="col-md-2 extra">
+          <a href="javascript:;">常见问题</a>
+          <a href="javascript:;">财富登陆</a>
+        </div>
+        <div class="col-md-3 join">
+          <a class="signup btn btn-default" href="javascript:;">免费注册</a>
+          <a class="signin" href="javascript:;">登录</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jQuery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>
